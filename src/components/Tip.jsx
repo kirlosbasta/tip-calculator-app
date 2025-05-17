@@ -38,7 +38,9 @@ function CustomTip({ dispatch, data }) {
   function handleChange(e) {
     const text = e.target.value;
     const num = Number(text);
-    if (!num) {
+    if (text === '') {
+      dispatch({ type: 'tip', value: '' });
+    } else if (!num) {
       setIsValid(false);
     } else {
       setIsValid(true);
