@@ -1,9 +1,13 @@
 {
   "name": "tip-calculator-app",
+  "homepage": "https://kirlosbasta.github.io/tip-calculator-app/",
   "version": "1.0.0",
-  "description": "\"Tip calculator app\"",
+  "description": "Tip calculator app",
+  "type": "module",
   "main": "index.html",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -11,6 +15,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.6",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.6"
